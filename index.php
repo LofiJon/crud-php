@@ -48,7 +48,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        include 'banco.php';
+                        include 'config/banco.php';
                         $pdo = Banco::conectar();
                         $sql = 'SELECT * FROM pessoa ORDER BY id DESC';
 

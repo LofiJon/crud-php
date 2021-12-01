@@ -1,5 +1,5 @@
 <?php
-require 'banco.php';
+require 'config/banco.php';
 $id = null;
 if (!empty($_GET['id'])) {
     $id = $_REQUEST['id'];

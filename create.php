@@ -1,10 +1,8 @@
 
 
 <?php
-require 'banco.php';
-//Acompanha os erros de validação
+require 'config/banco.php';
 
-// Processar so quando tenha uma chamada post
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nomeErro = null;
     $enderecoErro = null;
@@ -59,7 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
-//Inserindo no Banco:
     if ($validacao) {
         $pdo = Banco::conectar();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -78,7 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
     <meta charset="utf-8">
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <title>Adicionar Contato</title>
 </head>
